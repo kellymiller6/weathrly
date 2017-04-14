@@ -1,0 +1,28 @@
+body {
+  background-image: url(https://s-media-cache-ak0.pinimg.com/236x/5e/fa/72/5efa72f4c83768e6f60c93a6fc4350fc.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+p, h3{
+  margin: 5px;
+}
+
+.nav{
+  text-align: right;
+}
+
+.input-field{
+  margin-right: 10px;
+}
+
+.current-weather, .current-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.two-column{
+  display: flex;
+  justify-content: space-around;
+}
