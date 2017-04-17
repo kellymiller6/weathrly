@@ -9,7 +9,6 @@ describe('Hourly', () => {
   it('should have an array of ten hours', () => {
     const current = stub.current_observation;
     // const currentWeather = shallow(<CurrentWeather CurrentWeather = { current }/>);
-    console.log(stub)
   });
 
 });
