@@ -2,6 +2,7 @@ body {
   background-image: url(https://s-media-cache-ak0.pinimg.com/236x/5e/fa/72/5efa72f4c83768e6f60c93a6fc4350fc.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Roboto', sans-serif;
 }
 
 p, h3, h4, h5{
@@ -20,21 +21,26 @@ p, h3, h4, h5{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .summary{
   text-align: center;
 }
+
 .two-column{
   display: flex;
   justify-content: space-around;
 }
 
+.left-side{
+  margin-right: 20px;
+}
 .card{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  margin: 5px;
+  margin: 10px;
 }
 
 .hour-container{
