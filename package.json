@@ -1,5 +1,8 @@
 {
   "name": "react-starter-kit",
+  "jest": {
+    "setupFiles": ["<rootDir>/__mocks__/LocalStorageMock.js"]
+  },
   "version": "1.0.0",
   "description": "A good enough starter kit for a React project, I guess.",
   "main": "index.js",
