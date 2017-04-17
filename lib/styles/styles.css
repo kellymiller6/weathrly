@@ -4,8 +4,8 @@ body {
   background-size: cover;
 }
 
-p, h3{
-  margin: 5px;
+p, h3, h4, h5{
+  margin: 2px;
 }
 
 .nav{
@@ -25,4 +25,16 @@ p, h3{
 .two-column{
   display: flex;
   justify-content: space-around;
+}
+
+.card{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px;
+}
+
+.hour-container{
+  display: flex;
+  flex-direction: column;
 }
