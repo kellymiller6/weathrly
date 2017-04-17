@@ -22,6 +22,9 @@ p, h3, h4, h5{
   align-items: center;
 }
 
+.summary{
+  text-align: center;
+}
 .two-column{
   display: flex;
   justify-content: space-around;
