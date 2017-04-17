@@ -10,7 +10,8 @@ describe('Nav', () => {
   });
 
   it('should change the state based on user input', () => {
-    const nav = shallow(<Nav />);
+    const mockfn = jest.fn();
+    const nav = shallow(<Nav handleLocationSubmit={() => { mockfn() } } />);
     const state = nav.state();
     expect(state.location).toEqual('');
 
