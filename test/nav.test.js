@@ -3,37 +3,30 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 
 describe('Nav', () => {
-  it('should start off with an empty string as the state', () => {
+  it('should have a default location in state of empty string', () => {
     const nav = shallow(<Nav />);
     const state = nav.state();
     expect(state.location).toEqual('');
   });
 
   it('should change the state based on user input', () => {
-    const mockfn = jest.fn();
-    const nav = shallow(<Nav handleLocationSubmit={() => { mockfn() } } />);
-    const state = nav.state();
-    expect(state.location).toEqual('');
-
-    const input = nav.find('.text');
-
+    const spy = jest.fn();
+    const wrapper = shallow(<Nav handleLocationSubmit={() => { spy() } } />);
+    const input = wrapper.find('.text');
     input.simulate('change', { target: { value: 'kaneohe, hi' } });
-    expect(state.location).toEqual('kaneohe, hi');
+
+    expect(wrapper.state('location')).toEqual('kaneohe, hi');
   });
 
   it('should reset the state on click of submit', () => {
-    const nav = shallow(<Nav />);
-    const state = nav.state();
-    expect(state.location).toEqual('');
-
-    const input = nav.find('.text');
-
+    const spy = jest.fn();
+    const wrapper = shallow(<Nav handleLocationSubmit={() => { spy() } } />);
+    const input = wrapper.find('.text');
+    const submit = wrapper.find('.submit');
     input.simulate('change', { target: { value: 'kaneohe, hi' } });
-    expect(state.location).toEqual('kaneohe, hi');
-
-    const submit = nav.find('.submit');
+    expect(wrapper.state('location')).toEqual('kaneohe, hi');
 
     submit.simulate('click');
-    expect(state.location).toEqual('');
+    expect(wrapper.state('location')).toEqual('');
   });
 });
