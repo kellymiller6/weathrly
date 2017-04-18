@@ -17,7 +17,7 @@ describe('Hourly', () => {
                                                 .props.children).toEqual('2:00 PM');
   });
 
-  it('should display a time for each hour', () => {
+  it('should display a temperature for each hour', () => {
     expect(hoursArray.nodes[0].props.children[0].props.children[1].props.children).toEqual('75℉')
   });
 });
